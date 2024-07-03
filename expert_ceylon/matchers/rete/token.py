@@ -3,7 +3,7 @@
 from collections import namedtuple
 from enum import Enum
 
-from experta.fact import Fact
+from expert_ceylon.fact import Fact
 
 try:
     from collections.abc import Mapping  # noqa

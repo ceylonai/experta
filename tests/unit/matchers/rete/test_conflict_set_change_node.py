@@ -3,27 +3,27 @@ import pytest
 
 def test_conflictsetchange_exists():
     try:
-        from experta.matchers.rete.nodes import ConflictSetNode
+        from expert_ceylon.matchers.rete.nodes import ConflictSetNode
     except ImportError as exc:
         assert False, exc
 
 
 def test_conflictsetchange_is_abstractnode():
-    from experta.matchers.rete.nodes import ConflictSetNode
-    from experta.matchers.rete.abstract import OneInputNode
+    from expert_ceylon.matchers.rete.nodes import ConflictSetNode
+    from expert_ceylon.matchers.rete.abstract import OneInputNode
 
     assert issubclass(ConflictSetNode, OneInputNode)
 
 
 def test_conflictsetchange_interface():
-    from experta.matchers.rete.nodes import ConflictSetNode
+    from expert_ceylon.matchers.rete.nodes import ConflictSetNode
 
     assert hasattr(ConflictSetNode, 'get_activations')
 
 
 def test_conflictsetchange_accepts_rule():
-    from experta.matchers.rete.nodes import ConflictSetNode
-    from experta.rule import Rule
+    from expert_ceylon.matchers.rete.nodes import ConflictSetNode
+    from expert_ceylon.rule import Rule
 
     # MUST NOT RAISE
     ConflictSetNode(Rule())
@@ -33,10 +33,10 @@ def test_conflictsetchange_accepts_rule():
 
 
 def test_conflictsetchange_valid_adds_to_memory():
-    from experta.fact import Fact
-    from experta.matchers.rete.nodes import ConflictSetNode
-    from experta.matchers.rete.token import Token, TokenInfo
-    from experta.rule import Rule
+    from expert_ceylon.fact import Fact
+    from expert_ceylon.matchers.rete.nodes import ConflictSetNode
+    from expert_ceylon.matchers.rete.token import Token, TokenInfo
+    from expert_ceylon.rule import Rule
 
     csn = ConflictSetNode(Rule())
 
@@ -49,10 +49,10 @@ def test_conflictsetchange_valid_adds_to_memory():
 
 
 def test_conflictsetchange_invalid_removes_from_memory():
-    from experta.fact import Fact
-    from experta.matchers.rete.nodes import ConflictSetNode
-    from experta.matchers.rete.token import Token, TokenInfo
-    from experta.rule import Rule
+    from expert_ceylon.fact import Fact
+    from expert_ceylon.matchers.rete.nodes import ConflictSetNode
+    from expert_ceylon.matchers.rete.token import Token, TokenInfo
+    from expert_ceylon.rule import Rule
 
     csn = ConflictSetNode(Rule())
 
@@ -67,10 +67,10 @@ def test_conflictsetchange_invalid_removes_from_memory():
 
 
 def test_conflictsetchange_get_activations_data():
-    from experta.matchers.rete.nodes import ConflictSetNode
-    from experta.matchers.rete.token import Token
-    from experta.rule import Rule
-    from experta.fact import Fact
+    from expert_ceylon.matchers.rete.nodes import ConflictSetNode
+    from expert_ceylon.matchers.rete.token import Token
+    from expert_ceylon.rule import Rule
+    from expert_ceylon.fact import Fact
 
     rule = Rule()
     csn = ConflictSetNode(rule)

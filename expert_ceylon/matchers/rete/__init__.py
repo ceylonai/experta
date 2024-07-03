@@ -15,10 +15,10 @@ from collections import Counter
 from .check import TypeCheck, FactCapture, FeatureCheck
 from .nodes import BusNode, ConflictSetNode, FeatureTesterNode
 from .utils import prepare_rule, extract_facts, generate_checks, wire_rule
-from experta import OR
-from experta.rule import Rule
-from experta.fact import InitialFact
-from experta.abstract import Matcher
+from expert_ceylon import OR
+from expert_ceylon.rule import Rule
+from expert_ceylon.fact import InitialFact
+from expert_ceylon.abstract import Matcher
 
 
 class ReteMatcher(Matcher):

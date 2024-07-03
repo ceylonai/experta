@@ -10,8 +10,8 @@ Also see `retrieving the fact-list \
 """
 
 from collections import OrderedDict, Counter
-from experta.fact import Fact
-from experta import watchers
+from expert_ceylon.fact import Fact
+from expert_ceylon import watchers
 
 
 class FactList(OrderedDict):

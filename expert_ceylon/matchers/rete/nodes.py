@@ -9,9 +9,9 @@ needed in this implementation.
 from contextlib import suppress
 from itertools import chain
 
-from experta.activation import Activation
-from experta.rule import Rule
-from experta.watchers import MATCHER, MATCH
+from expert_ceylon.activation import Activation
+from expert_ceylon.rule import Rule
+from expert_ceylon.watchers import MATCHER, MATCH
 
 from . import mixins
 from .abstract import Node, OneInputNode, TwoInputNode

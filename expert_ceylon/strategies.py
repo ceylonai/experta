@@ -1,7 +1,7 @@
 from functools import lru_cache
 import bisect
 
-from experta.abstract import Strategy
+from expert_ceylon.abstract import Strategy
 
 
 class DepthStrategy(Strategy):

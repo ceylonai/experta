@@ -3,11 +3,11 @@ from functools import singledispatch
 import dis
 import inspect
 
-from experta.fieldconstraint import FieldConstraint
-from experta.fieldconstraint import L, P, W
-from experta.fieldconstraint import ANDFC, ORFC, NOTFC
+from expert_ceylon.fieldconstraint import FieldConstraint
+from expert_ceylon.fieldconstraint import L, P, W
+from expert_ceylon.fieldconstraint import ANDFC, ORFC, NOTFC
 from .abstract import Check
-from experta.watchers import MATCH
+from expert_ceylon.watchers import MATCH
 
 try:
     from collections.abc import Mapping  # noqa

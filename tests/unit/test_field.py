@@ -1,4 +1,4 @@
-from experta.fact import BaseField, Field
+from expert_ceylon.fact import BaseField, Field
 
 
 def test_basefield_interface():

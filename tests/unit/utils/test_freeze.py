@@ -1,6 +1,6 @@
 import pytest
 
-from experta.utils import freeze, unfreeze, frozenlist, frozendict
+from expert_ceylon.utils import freeze, unfreeze, frozenlist, frozendict
 
 
 def test_freeze_hashable():

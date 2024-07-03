@@ -5,13 +5,13 @@ from hypothesis import assume, settings
 from hypothesis.database import DirectoryBasedExampleDatabase
 from hypothesis.stateful import Bundle, RuleBasedStateMachine, rule, invariant, consumes
 
-from experta.activation import Activation
-from experta.agenda import Agenda
-from experta.engine import KnowledgeEngine
-from experta.fact import Fact
-from experta.factlist import FactList
-from experta.rule import Rule
-from experta.strategies import DepthStrategy
+from expert_ceylon.activation import Activation
+from expert_ceylon.agenda import Agenda
+from expert_ceylon.engine import KnowledgeEngine
+from expert_ceylon.fact import Fact
+from expert_ceylon.factlist import FactList
+from expert_ceylon.rule import Rule
+from expert_ceylon.strategies import DepthStrategy
 
 
 def get_rule_stm(strategy):

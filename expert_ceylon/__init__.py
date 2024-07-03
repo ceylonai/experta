@@ -1,4 +1,4 @@
-__version__ = '2.0.0-alpha.1'
+__version__ = '2.0.0-alpha.2'
 
 try:
     from .conditionalelement import AND, OR, NOT, TEST, EXISTS, FORALL

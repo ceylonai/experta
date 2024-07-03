@@ -2,8 +2,8 @@ from unittest.mock import MagicMock
 
 import pytest
 
-from experta.fact import Fact, Field
-from experta.engine import KnowledgeEngine
+from expert_ceylon.fact import Fact, Field
+from expert_ceylon.engine import KnowledgeEngine
 
 
 def test_fact_mix_positional_and_kw_index():

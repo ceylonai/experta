@@ -1,8 +1,8 @@
 from functools import update_wrapper
 import inspect
 
-from experta import watchers
-from experta.conditionalelement import ConditionalElement
+from expert_ceylon import watchers
+from expert_ceylon.conditionalelement import ConditionalElement
 
 try:
     from collections.abc import Iterable  # noqa

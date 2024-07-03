@@ -3,19 +3,19 @@ import pytest
 
 def test_deffacts_module_exists():
     try:
-        from experta import deffacts
+        from expert_ceylon import deffacts
     except ImportError as exc:
         assert False, exc
 
 
 def test_deffacts_class_exists():
-    from experta import deffacts
+    from expert_ceylon import deffacts
 
     assert hasattr(deffacts, 'DefFacts')
 
 
 def test_deffacts_can_decorate_generator():
-    from experta import DefFacts, Fact
+    from expert_ceylon import DefFacts, Fact
 
     @DefFacts()
     def mygenerator():
@@ -25,7 +25,7 @@ def test_deffacts_can_decorate_generator():
 
 
 def test_deffacts_return_copies_of_facts():
-    from experta import DefFacts, Fact
+    from expert_ceylon import DefFacts, Fact
 
     f0 = Fact()
 
@@ -37,7 +37,7 @@ def test_deffacts_return_copies_of_facts():
 
 
 def test_deffacts_stores_order():
-    from experta import DefFacts, Fact
+    from expert_ceylon import DefFacts, Fact
 
     @DefFacts(order=-10)
     def mygenerator():
@@ -47,7 +47,7 @@ def test_deffacts_stores_order():
 
 
 def test_deffacts_does_not_accept_non_generators():
-    from experta import DefFacts, Fact
+    from expert_ceylon import DefFacts, Fact
 
     with pytest.raises(TypeError):
         @DefFacts()
@@ -56,7 +56,7 @@ def test_deffacts_does_not_accept_non_generators():
 
 
 def test_deffacts_can_decorate_methods():
-    from experta import DefFacts, Fact
+    from expert_ceylon import DefFacts, Fact
 
     class Test:
         @DefFacts()
@@ -68,7 +68,7 @@ def test_deffacts_can_decorate_methods():
 
 
 def test_deffacts_without_parenthesis():
-    from experta import DefFacts
+    from expert_ceylon import DefFacts
 
     with pytest.raises(SyntaxError):
         @DefFacts

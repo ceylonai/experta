@@ -8,7 +8,7 @@ import pytest
 def test_factlist_is_ordereddict():
     """ Fact list on FactList object is an OrderedDict """
 
-    from experta.factlist import FactList
+    from expert_ceylon.factlist import FactList
     from collections import OrderedDict
     assert issubclass(FactList, OrderedDict)
 
@@ -16,14 +16,14 @@ def test_factlist_is_ordereddict():
 def test_factlist_facts_idx_starts_zero():
     """ Factlist idx starts at zero """
 
-    from experta.factlist import FactList
+    from expert_ceylon.factlist import FactList
     assert getattr(FactList(), "last_index") == 0
 
 
 def test_factlist_declare_raises_valueError():
     """ declare raises valueerror if not ``Fact`` object providen """
 
-    from experta.factlist import FactList
+    from expert_ceylon.factlist import FactList
     import pytest
 
     with pytest.raises(ValueError):
@@ -32,8 +32,8 @@ def test_factlist_declare_raises_valueError():
 
 def test_factlist_declare():
     """ Test declare method adds to factlist and updates index """
-    from experta.factlist import FactList
-    from experta import Fact
+    from expert_ceylon.factlist import FactList
+    from expert_ceylon import Fact
     flist = FactList()
     assert getattr(flist, "last_index") == 0
     assert not flist
@@ -45,8 +45,8 @@ def test_factlist_declare():
 def test_factlist_retract():
     """ Test retract method """
 
-    from experta.factlist import FactList
-    from experta import Fact
+    from expert_ceylon.factlist import FactList
+    from expert_ceylon import Fact
     flist = FactList()
     assert getattr(flist, "last_index") == 0
     assert not flist
@@ -60,8 +60,8 @@ def test_factlist_retract():
 def test_factlist_changes():
     """ Test factlist changes """
 
-    from experta.factlist import FactList
-    from experta import Fact
+    from expert_ceylon.factlist import FactList
+    from expert_ceylon import Fact
 
     flist = FactList()
 
@@ -76,8 +76,8 @@ def test_factlist_changes():
 
 
 def test_factlist_raises_valueerror_on_invalid_fact():
-    from experta.factlist import FactList
-    from experta import Fact, Field
+    from expert_ceylon.factlist import FactList
+    from expert_ceylon import Fact, Field
 
     class MockFact(Fact):
         must_be_string = Field(str, mandatory=True)

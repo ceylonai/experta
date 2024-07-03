@@ -1,6 +1,6 @@
 import abc
 
-from experta import watchers
+from expert_ceylon import watchers
 
 
 class Matcher(metaclass=abc.ABCMeta):

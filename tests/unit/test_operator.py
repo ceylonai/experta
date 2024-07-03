@@ -1,9 +1,9 @@
 import pytest
 import re
 
-from experta import KnowledgeEngine, Rule, Fact
-from experta.operator import TRUTH, LT, LE, EQ, NE, GE, GT, IS, IS_NOT
-from experta.operator import CONTAINS, BETWEEN, CALL, REGEX, LIKE, ILIKE
+from expert_ceylon import KnowledgeEngine, Rule, Fact
+from expert_ceylon.operator import TRUTH, LT, LE, EQ, NE, GE, GT, IS, IS_NOT
+from expert_ceylon.operator import CONTAINS, BETWEEN, CALL, REGEX, LIKE, ILIKE
 
 
 @pytest.mark.parametrize("operator,x,expected", [

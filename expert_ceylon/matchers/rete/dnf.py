@@ -5,10 +5,10 @@ from collections import OrderedDict
 from functools import singledispatch
 from itertools import chain, product
 
-from experta.conditionalelement import AND, OR, NOT
-from experta.fieldconstraint import ORFC, NOTFC, ANDFC
-from experta.rule import Rule
-from experta.fact import Fact
+from expert_ceylon.conditionalelement import AND, OR, NOT
+from expert_ceylon.fieldconstraint import ORFC, NOTFC, ANDFC
+from expert_ceylon.rule import Rule
+from expert_ceylon.fact import Fact
 
 
 def unpack_exp(exp, op):

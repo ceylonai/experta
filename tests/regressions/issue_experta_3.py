@@ -1,5 +1,5 @@
 try:
-    from experta import *
+    from expert_ceylon import *
 except ImportError:
     from pyknow import *
 

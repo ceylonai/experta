@@ -1,33 +1,33 @@
 import pytest
 
-from experta import abstract
+from expert_ceylon import abstract
 
 
 def test_retematcher_exists():
     try:
-        from experta.matchers.rete import ReteMatcher
+        from expert_ceylon.matchers.rete import ReteMatcher
     except ImportError as exc:
         assert False, exc
 
 
 def test_retematcher_is_matcher():
-    from experta.matchers.rete import ReteMatcher
+    from expert_ceylon.matchers.rete import ReteMatcher
 
     assert issubclass(ReteMatcher, abstract.Matcher)
 
 
 def test_retematcher_is_not_abstract():
-    from experta.matchers.rete import ReteMatcher
-    from experta.engine import KnowledgeEngine
+    from expert_ceylon.matchers.rete import ReteMatcher
+    from expert_ceylon.engine import KnowledgeEngine
 
     # MUST NOT RAISE
     ReteMatcher(KnowledgeEngine())
 
 
 def test_retematcher_has_root_node():
-    from experta.matchers.rete import ReteMatcher
-    from experta.engine import KnowledgeEngine
-    from experta.matchers.rete.nodes import BusNode
+    from expert_ceylon.matchers.rete import ReteMatcher
+    from expert_ceylon.engine import KnowledgeEngine
+    from expert_ceylon.matchers.rete.nodes import BusNode
 
     matcher = ReteMatcher(KnowledgeEngine())
     assert hasattr(matcher, 'root_node')
@@ -35,10 +35,10 @@ def test_retematcher_has_root_node():
 
 
 def test_retematcher_changes_are_propagated(TestNode):
-    from experta.engine import KnowledgeEngine
-    from experta.fact import Fact
-    from experta.matchers.rete import ReteMatcher
-    from experta.matchers.rete.token import Token
+    from expert_ceylon.engine import KnowledgeEngine
+    from expert_ceylon.fact import Fact
+    from expert_ceylon.matchers.rete import ReteMatcher
+    from expert_ceylon.matchers.rete.token import Token
 
     matcher = ReteMatcher(KnowledgeEngine())
     tn1 = TestNode()
@@ -66,12 +66,12 @@ def test_retematcher_changes_are_propagated(TestNode):
 
 
 def test_retematcher_changes_return_activations_if_csn():
-    from experta.engine import KnowledgeEngine
-    from experta.fact import Fact
-    from experta.rule import Rule
-    from experta.activation import Activation
-    from experta.matchers.rete.nodes import ConflictSetNode
-    from experta.matchers.rete import ReteMatcher
+    from expert_ceylon.engine import KnowledgeEngine
+    from expert_ceylon.fact import Fact
+    from expert_ceylon.rule import Rule
+    from expert_ceylon.activation import Activation
+    from expert_ceylon.matchers.rete.nodes import ConflictSetNode
+    from expert_ceylon.matchers.rete import ReteMatcher
 
     matcher = ReteMatcher(KnowledgeEngine())
     rule = Rule()

@@ -3,7 +3,7 @@ import pytest
 
 def test_strategies_exists():
     try:
-        from experta import strategies
+        from expert_ceylon import strategies
     except ImportError as exc:
         assert False, exc
     else:
@@ -11,44 +11,44 @@ def test_strategies_exists():
 
 
 def test_Strategy_exists():
-    from experta import strategies
+    from expert_ceylon import strategies
 
     assert hasattr(strategies, 'Strategy')
 
 
 def test_Strategy_is_class():
-    from experta.abstract import Strategy
+    from expert_ceylon.abstract import Strategy
 
     assert isinstance(Strategy, type)
 
 
 def test_Strategy_is_abstract():
-    from experta.abstract import Strategy
+    from expert_ceylon.abstract import Strategy
 
     with pytest.raises(TypeError):
         Strategy()
 
 
 def test_DepthStrategy_exists():
-    from experta import strategies
+    from expert_ceylon import strategies
 
     assert hasattr(strategies, 'DepthStrategy')
 
 
 def test_DepthStrategy_is_Strategy():
-    from experta.strategies import DepthStrategy, Strategy
+    from expert_ceylon.strategies import DepthStrategy, Strategy
 
     assert issubclass(DepthStrategy, Strategy)
 
 
 def test_DepthStrategy_has_update_agenda():
-    from experta.strategies import DepthStrategy
+    from expert_ceylon.strategies import DepthStrategy
     assert hasattr(DepthStrategy(), 'update_agenda')
 
 
 def test_DepthStrategy_update_agenda_no_facts_returns_empty_agenda():
-    from experta.strategies import DepthStrategy
-    from experta.agenda import Agenda
+    from expert_ceylon.strategies import DepthStrategy
+    from expert_ceylon.agenda import Agenda
 
     st = DepthStrategy()
     a = Agenda()
@@ -59,12 +59,12 @@ def test_DepthStrategy_update_agenda_no_facts_returns_empty_agenda():
 
 
 def test_DepthStrategy_update_agenda_activations_to_agenda():
-    from experta.strategies import DepthStrategy
-    from experta.activation import Activation
-    from experta import Rule
-    from experta.agenda import Agenda
-    from experta import Fact
-    from experta.factlist import FactList
+    from expert_ceylon.strategies import DepthStrategy
+    from expert_ceylon.activation import Activation
+    from expert_ceylon import Rule
+    from expert_ceylon.agenda import Agenda
+    from expert_ceylon import Fact
+    from expert_ceylon.factlist import FactList
 
     fl = FactList()
     f1 = Fact(1)
@@ -85,12 +85,12 @@ def test_DepthStrategy_update_agenda_activations_to_agenda():
 
 
 def test_DepthStrategy_update_agenda_assertion_order_affects_agenda_order_1():
-    from experta.strategies import DepthStrategy
-    from experta.activation import Activation
-    from experta import Rule
-    from experta.agenda import Agenda
-    from experta import Fact
-    from experta.factlist import FactList
+    from expert_ceylon.strategies import DepthStrategy
+    from expert_ceylon.activation import Activation
+    from expert_ceylon import Rule
+    from expert_ceylon.agenda import Agenda
+    from expert_ceylon import Fact
+    from expert_ceylon.factlist import FactList
 
     fl = FactList()
 
@@ -126,12 +126,12 @@ def test_DepthStrategy_update_agenda_assertion_order_affects_agenda_order_1():
 
 
 def test_DepthStrategy_update_agenda_asertion_order_affects_agenda_order_2():
-    from experta.strategies import DepthStrategy
-    from experta.activation import Activation
-    from experta import Rule
-    from experta.agenda import Agenda
-    from experta import Fact
-    from experta.factlist import FactList
+    from expert_ceylon.strategies import DepthStrategy
+    from expert_ceylon.activation import Activation
+    from expert_ceylon import Rule
+    from expert_ceylon.agenda import Agenda
+    from expert_ceylon import Fact
+    from expert_ceylon.factlist import FactList
 
     fl = FactList()
 
@@ -179,12 +179,12 @@ def test_DepthStrategy_update_agenda_asertion_order_affects_agenda_order_3():
       arbitrary.
 
     """
-    from experta.strategies import DepthStrategy
-    from experta.activation import Activation
-    from experta import Rule
-    from experta.agenda import Agenda
-    from experta import Fact
-    from experta.factlist import FactList
+    from expert_ceylon.strategies import DepthStrategy
+    from expert_ceylon.activation import Activation
+    from expert_ceylon import Rule
+    from expert_ceylon.agenda import Agenda
+    from expert_ceylon import Fact
+    from expert_ceylon.factlist import FactList
 
     fl = FactList()
 
@@ -215,12 +215,12 @@ def test_DepthStrategy_update_agenda_asertion_order_affects_agenda_order_3():
 def test_DepthStrategy_update_agenda_different_salience():
     from random import shuffle
 
-    from experta.strategies import DepthStrategy
-    from experta.activation import Activation
-    from experta import Rule
-    from experta import Fact
-    from experta.agenda import Agenda
-    from experta.factlist import FactList
+    from expert_ceylon.strategies import DepthStrategy
+    from expert_ceylon.activation import Activation
+    from expert_ceylon import Rule
+    from expert_ceylon import Fact
+    from expert_ceylon.agenda import Agenda
+    from expert_ceylon.factlist import FactList
 
     flist = FactList()
 

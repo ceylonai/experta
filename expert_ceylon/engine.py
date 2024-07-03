@@ -7,14 +7,14 @@ from itertools import chain
 import inspect
 import logging
 
-from experta import abstract
+from expert_ceylon import abstract
 
-from experta.agenda import Agenda
-from experta.fact import InitialFact
-from experta.factlist import FactList
-from experta.rule import Rule
-from experta.deffacts import DefFacts
-from experta import watchers
+from expert_ceylon.agenda import Agenda
+from expert_ceylon.fact import InitialFact
+from expert_ceylon.factlist import FactList
+from expert_ceylon.rule import Rule
+from expert_ceylon.deffacts import DefFacts
+from expert_ceylon import watchers
 
 logging.basicConfig()
 
@@ -29,8 +29,8 @@ class KnowledgeEngine:
     This could be considered, when inherited from, as the
     ``knowlege-base``.
     """
-    from experta.matchers import ReteMatcher as __matcher__
-    from experta.strategies import DepthStrategy as __strategy__
+    from expert_ceylon.matchers import ReteMatcher as __matcher__
+    from expert_ceylon.strategies import DepthStrategy as __strategy__
 
     def __init__(self):
         self.running = False

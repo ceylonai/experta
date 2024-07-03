@@ -5,9 +5,9 @@ from .check import WhereCheck
 from .dnf import dnf
 from .nodes import ConflictSetNode, NotNode, OrdinaryMatchNode
 from .nodes import WhereNode
-from experta.conditionalelement import NOT, OR, AND, TEST, EXISTS, FORALL
-from experta.fact import InitialFact, Fact
-from experta.rule import Rule
+from expert_ceylon.conditionalelement import NOT, OR, AND, TEST, EXISTS, FORALL
+from expert_ceylon.fact import InitialFact, Fact
+from expert_ceylon.rule import Rule
 
 
 @singledispatch

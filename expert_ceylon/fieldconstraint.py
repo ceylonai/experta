@@ -1,5 +1,5 @@
-from experta.conditionalelement import ConditionalElement
-from experta.pattern import Bindable
+from expert_ceylon.conditionalelement import ConditionalElement
+from expert_ceylon.pattern import Bindable
 
 try:
     from collections.abc import Callable  # noqa

@@ -4,10 +4,10 @@ import abc
 
 from schema import Schema
 
-from experta.pattern import Bindable
-from experta.utils import freeze, unfreeze
-from experta.conditionalelement import OperableCE
-from experta.conditionalelement import ConditionalElement
+from expert_ceylon.pattern import Bindable
+from expert_ceylon.utils import freeze, unfreeze
+from expert_ceylon.conditionalelement import OperableCE
+from expert_ceylon.conditionalelement import ConditionalElement
 
 try:
     from collections.abc import Callable  # noqa
