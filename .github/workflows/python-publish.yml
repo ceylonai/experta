@@ -9,8 +9,16 @@
 name: Upload Python Package
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
+      - master
+      - devops
+      - develop
+    tags:
+      - '*'
+  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
